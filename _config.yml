@@ -1,1 +1,18 @@
 Add _config.yml for Jekyll
+# _config.yml - configuración básica para GitHub Pages + Jekyll
+title: "CASDA PROYECTOS"
+description: "Portafolio web de ingeniería, geotecnia y estructuras"
+url: "https://edd1989999.github.io"   # tu URL base (sin final slash)
+baseurl: "/proyecto-web"               # la subcarpeta del sitio en GitHub Pages
+author: "Ingeotecnia Construcciones S.A.S"
+email: ""
+theme: minima                          # tema Jekyll soportado por GitHub Pages
+lang: es
+# Opciones adicionales (opcional)
+paginate: 6
+exclude: ["README.md", "node_modules", ".github"]
+# Social (solo para tu uso si decides usar plantillas que lo lean)
+social:
+  twitter: ""
+  linkedin: ""
+  github: "edd1989999"
