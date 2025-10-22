@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CASDA PROYECTOS — Portafolio General</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  text-align: center;
+}
+header {
+  background: #111;
+  padding: 15px;
+}
+header img {
+  width: 160px;
+  border-radius: 10px;
+}
+h1 {
+  color: #ffd700;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h2 {
+  color: #00bfff;
+  margin: 40px 0 15px;
+  text-transform: uppercase;
+}
+.gallery {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 0 auto 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255,215,0,.3);
+}
+.gallery img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.gallery img.active {
+  opacity: 1;
+}
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #111;
+  font-size: .9em;
+  color: #bbb;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/LOGO/LOGO.JPG" alt="Logo CASDA">
+  <h1>PORTAFOLIO DE PROYECTOS — CASDA</h1>
+</header>
+
+<!-- ===== GALERÍAS ===== -->
+
+<h2>ESTUDIO SAGRADO CORAZÓN</h2>
+<div class="gallery" id="g1">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/ESTUDIO_SAGRADO_CORAZON/1(1).JPG" class="active">
+  <!-- hasta 1(19).JPG -->
+</div>
+
+<h2>TANQUE DE ALMACENAMIENTO MONTVENTO</h2>
+<div class="gallery" id="g2">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/TANQUE_MONTVENTO/1(1).JPG" class="active">
+  <!-- hasta 1(9).JPG -->
+</div>
+
+<h2>MIRADOR TURÍSTICO</h2>
+<div class="gallery" id="g3">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/MIRADOR_TURISTICO/1(1).JPG" class="active">
+  <!-- hasta 1(5).JPG -->
+</div>
+
+<h2>AEROPUERTO PALONEGRO</h2>
+<div class="gallery" id="g4">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/AEROPUERTO_PALONEGRO/1.JPG" class="active">
+  <!-- hasta 5.JPG -->
+</div>
+
+<h2>ANÁLISIS DE ESTRUCTURA METÁLICA CONSTRUIDA</h2>
+<div class="gallery" id="g5">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/ANALISIS_ESTRUCTURA_METALICA/1(1).JPG" class="active">
+  <!-- hasta 1(3).JPG -->
+</div>
+
+<h2>DISEÑO REFORZAMIENTO ESTRUCTURAL METÁLICO</h2>
+<div class="gallery" id="g6">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/DISENO_REFORZAMIENTO_METALICO/1(1).JPG" class="active">
+  <!-- hasta 1(4).JPG -->
+</div>
+
+<h2>CONSTRUCCIÓN OBRA METÁLICA</h2>
+<div class="gallery" id="g7">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/CONSTRUCCION_OBRA_METALICA/1(1).JPG" class="active">
+  <!-- hasta 1(14).JPG -->
+</div>
+
+<h2>GALERÍA BA</h2>
+<div class="gallery" id="g8">
+  <img src="https://edd1989999.github.io/proyecto-web/IMAGENES/PROYECTOS/GALERIA_BA/1(1).JPG" class="active">
+  <!-- hasta 1(139).JPG -->
+</div>
+
+<h2>PORTAFOLIO VACÍO (PRÓXIMO PROYECTO)</h2>
+<div class="gallery">
+  <p style="color:#aaa; padding-top:260px;">
+    Aquí irá el próximo proyecto — agrega tus imágenes a
+    <code>IMAGENES/PROYECTOS/NUEVO_PROYECTO/</code> y copia un bloque de galería similar.
+  </p>
+</div>
+
+<footer>
+  © 2025 INGEOTECNIA CONSTRUCCIONES SAS — GEOTECNÍA Y ENERGÍAS RENOVABLES
+</footer>
+
+<script>
+  document.querySelectorAll('.gallery').forEach(gallery => {
+    const imgs = gallery.querySelectorAll('img');
+    let i = 0;
+    if(imgs.length) imgs[0].classList.add('active');
+    setInterval(() => {
+      if(imgs.length) {
+        imgs[i].classList.remove('active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('active');
+      }
+    }, 8000);
+  });
+</script>
+
+</body>
+</html>
